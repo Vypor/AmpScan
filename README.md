@@ -15,7 +15,8 @@ Next run the scan script.
     
     perl Dnsscan.pl 67.2.0.0 68.0.0.0 vmware.com
     
-
+**Scripts must be ran in sepreate windows**
 OpenScan
 ----------
 Used for scanning with your own packets. found in the Openscan directory.
+
