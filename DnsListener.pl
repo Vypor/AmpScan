@@ -2,9 +2,9 @@ use strict;
 use warnings;
 use Net::Pcap::Easy;
 
-if ( $#ARGV != 2 ) {
-    print "Usage: DnsListener.pl <interface> <maxbytesize> <outputfile>\n";
-    print "Example: perl DnsListener.pl eth1 3000\n";
+if ( $#ARGV != 3 ) {
+    print "Usage: DnsListener.pl <interface> <maxbytesize> <outputfile> <domain>\n";
+    print "Example: perl DnsListener.pl eth1 3000 vmware.com\n";
     print "Coded by Vypor, https://github.com/Vypor\n";
     exit(1);
 }
@@ -12,6 +12,7 @@ if ( $#ARGV != 2 ) {
 my $interface = $ARGV[0];
 my $leastsize = $ARGV[1];
 my $LOGFILE   = $ARGV[2];
+my $domain    = $ARGV[3];
 my $ethip = `/sbin/ifconfig $interface | grep "inet addr" | awk -F: '{print \$2}' | awk '{print \$1}'`;
 $ethip = substr( $ethip, 0, -1 );
 
