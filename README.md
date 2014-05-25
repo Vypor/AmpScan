@@ -1,6 +1,12 @@
 AmpScan v0.1
 =======
-
+**Dependencies**
+Net::DNS
+        http://search.cpan.org/CPAN/authors/id/N/NL/NLNETLABS/Net-DNS-0.76.tar.gz
+Net::Pcap
+        http://search.cpan.org/~saper/Net-Pcap-0.17/Pcap.pm
+Net::Pcap::Easy
+        http://search.cpan.org/~jettero/Net-Pcap-Easy-1.4207/Easy.pod
 **Usage's:**
 
 Run Dnslistner before you start the Dnsscan.
