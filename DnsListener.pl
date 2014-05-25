@@ -31,7 +31,7 @@ my $listener = Net::Pcap::Easy->new(
         open( FILE, ">>$LOGFILE" );
         print FILE "$ip->{src_ip} $domain $udp->{len}\n";
         close FILE;
-        print "$ip->{src_ip} $udp->{len}\n";
+        print "$ip->{src_ip} $domain $udp->{len}\n";
 
     }
 );
