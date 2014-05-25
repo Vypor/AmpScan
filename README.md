@@ -29,3 +29,7 @@ Next run the scan script.
 OpenScan
 ----------
 Used for scanning with your own packets. found in the Openscan directory.
+**Packet Examples**
+
+Find Packet Examples here:
+http://ge.tt/5Fklprh1/v/0
