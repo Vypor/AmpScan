@@ -5,6 +5,7 @@ use Net::Pcap::Easy;
 if ( $#ARGV != 3 ) {
     print "Usage: DnsListener.pl <interface> <maxbytesize> <outputfile> <domain>\n";
     print "Example: perl DnsListener.pl eth1 3000 vmware.com\n";
+    print "Notice, domain must match on both the listener and the scan script!\n";
     print "Coded by Vypor, https://github.com/Vypor\n";
     exit(1);
 }
@@ -28,7 +29,7 @@ my $listener = Net::Pcap::Easy->new(
         my ( $listener, $ether, $ip, $udp, $header ) = @_;
 
         open( FILE, ">>$LOGFILE" );
-        print FILE "$ip->{src_ip} $udp->{len}\n";
+        print FILE "$ip->{src_ip} $domain $udp->{len}\n";
         close FILE;
         print "$ip->{src_ip} $udp->{len}\n";
 
